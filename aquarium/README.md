@@ -1,4 +1,4 @@
-# SpringBoot with AdminLTE 2
+# SpringBoot 2.1.2 with AdminLTE 2
 ---
 
 Application with SpringBoot and the AdminLTE 2 template to facilitate development.
