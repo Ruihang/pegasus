@@ -1,0 +1,906 @@
+<!-- Logo -->
+<a href="/" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini" th:utext="#{label.app.shortTitle}">PE</span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg" th:utext="#{label.app.title}"></span>
+</a>
+<!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu">
+    	<ul id="main-menu" class="sm sm-blue">
+    	<li class="has-mega-menu"><a href="#"><span th:text="#{nav.menu.businessServices}"></span></a>
+	      <ul class="mega-menu">
+	        <li>
+	          <div class="column-1-5">
+	            <span class="menuHeader"th:text="#{nav.menu.solutions}"></span>
+	            <hr>
+	            <div class="mega-menu-sample-image"><img src="/image/cux/digital_transformation_small.png"></div>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.collaborativeWorkspace}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.cyberdefense}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.dataIntelligence}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.enrichedConnectivity}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.enrichedCustomerRelationships}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.cloud}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.internetOfThings}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.services}"></span></a></li>
+	            </ul>
+	            <span class="menuHeader" th:text="#{nav.menu.regionalPresence}"></span>
+	            <hr>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.asiaPacific}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.europe}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.latinAmerica}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.middleEastAfrica}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.northAmerica}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.rusia}"></span></a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.strategy}"></span>
+	            <hr>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.strategyInsights}"></span></a></li>
+	            </ul>
+	            <span class="menuHeader" th:text="#{nav.menu.operations}"></span>
+	            <hr>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.operationsInsight}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.businessProcessServices}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.journeyToCloud}"></span></a></li>
+	            </ul>
+	            <span class="menuHeader" th:text="#{nav.menu.consulting}"></span>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.consultingInsights}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologyConsulting}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.accentureSecurity}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.blockchain}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.cfoEnterpriseValue}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.customerInsightGrowth}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.supplyChainOperations}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.talentOrganization}"></span></a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.digital}"></span>
+	            <hr>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.digitalInsight}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.accentureAppliedIntelligence}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.accentureInteractive}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.industryX0}"></span></a></li>
+	            </ul>
+	            <span class="menuHeader" th:text="#{nav.menu.technology}"></span>
+	            <hr>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologyInsight}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.accentureLabs}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.applicationServices}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologyCloud}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologyMicrosoft}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologyOracle}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologySAP}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologySalesforce}"></span></a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.industries}"></span></h2>
+	            <hr>
+	            <ul>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.automotive}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.communicationsMedia}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.highTech}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.naturalResources}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.travel}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.banking}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.consumerGoodsServices}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.industrialEquipment}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.consumerGoodsServices}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.industrialEquipment}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.automotive}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.communicationsMedia}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.highTech}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.naturalResources}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.wholesale}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.retails}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.utilities}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.chemicals}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.health}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.lifeSciences}"></span></a></li>
+	              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.softwarePlatforms}"></span></a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.careers}"></span>
+	            <hr>
+	            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p> -->
+	            <ul>
+	            	<li><a href="#"><span class="menuItem" th:text="#{nav.menu.careersHome}"></span></a>
+	              <li><span class="menuHeader" th:text="#{nav.menu.joinUs}"></span></a>
+	              	<ul>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.searchApply}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.experiencedHire}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.studentsGraduates}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.veteransMilitarySpouses}"></span></a></li>
+	              	</ul>
+	              </li>
+	              <li><a href="#"><span class="menuHeader" th:text="#{nav.menu.businesses}"></span></a>
+	              	<ul>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.consultingJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.cyberSecurityJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.digitalJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.strategyJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.operationsJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.technologyJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.federalServicesJobs}"></span></a></li>
+			              <li><a href="#"><span class="menuItem" th:text="#{nav.menu.corporateJobs}"></span></a></li>
+	              	</ul>
+	              </li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.businessInsight}">Heading 5</span>
+	            <hr>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p>
+	            <ul>
+	              <li><a href="#">Regular link</a></li>
+	              <li><a href="#">Regular link</a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.businessInsight}">Heading 6</span>
+	            <hr>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p>
+	            <ul>
+	              <li><a href="#">Regular link</a></li>
+	              <li><a href="#">Regular link</a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	            <span class="menuHeader" th:text="#{nav.menu.businessInsight}">Heading 7</span>
+	            <hr>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p>
+	            <ul>
+	              <li><a href="#">Regular link</a></li>
+	              <li><a href="#">Regular link</a></li>
+	            </ul>
+	          </div>
+	          <div class="column-1-5">
+	          	<ul>
+	            <li><a href="#"><span class="menuHeader" th:text="#{label.menu.about}"></span></a></li></ul>
+	            <hr>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit velit, ultricies eget porta ac.</p>
+	            <ul>
+	              <li><a href="#"><span  class="item">Regular </span> Regular link</a></li>
+	              <li><a href="#">Regular link</a></li>
+	            </ul>
+	          </div>
+	        </li>
+	      </ul>
+	    </li>
+        <li><a href="#"><span th:text="#{label.menu.about}"></span></a>
+          <ul>
+            <li><a href="#"><span th:text="#{label.menu.ourGrowthStory}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.aboutEP}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.ourTeam}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.ourCodeofConduct}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.faqs}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.policy}"></span></a>
+              <ul>
+                <li><a href="#"><span th:text="#{label.menu.antiCorruptionPolicy}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.privacyPolicy}"></span></a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span th:text="#{label.menu.whyUs}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.news}"></span></a>
+              <ul>
+                <li><a href="#"><span th:text="#{label.menu.upcomingEvents}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.newsInformation}"></span></a></li>
+		            <li><a href="#"><span th:text="#{label.menu.blog}"></span></a>
+		              <ul>
+		                <li><a href="#"><span th:text="#{label.menu.viewAllBlogs}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.kiosk}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.mobilePOS}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.nightclubAndBar}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.payments}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.restaurant}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.retail}"></span></a></li>
+		                <li><a href="#"><span th:text="#{label.menu.technology}"></span></a></li>
+		              </ul>
+		            </li>
+              </ul>
+            </li>
+		        <li><a href="#"><span th:text="#{label.menu.careers}"></span></a>
+		          <ul>
+		            <li><a href="#"><span th:text="#{label.menu.lifeAtEP}"></span></a></li>
+		            <li><a href="#"><span th:text="#{label.menu.currentOpennings}"></span></a></li>
+		          </ul>
+		        </li>
+          </ul>
+        </li>
+        <li><a href="#"><span th:text="#{label.menu.solutions}"></span></a>
+          <ul>
+            <li><a href="#"><span th:text="#{label.menu.enterpriseServersStorageSolutions}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.dataCenterSolutions}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.applicationDeliveryInfrastructure}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.enterpriseBusinessSolutions}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.networkIntegrationSecuritySolutions}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.bringYourOwnDeviceSolutions}"></span></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span th:text="#{label.menu.services}"></span></a>
+          <ul>
+            <li><a href="#"><span th:text="#{label.menu.iTInfrastructureManagementandServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.facilitiesManagementServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.consultancyandProfessionalServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.managedPrintServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.cloudServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.connectivityServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.orientHostedManagedServices}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.staffAugmentation}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.customApplicationDevelopment}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.testingServices}"></span></a>
+              <ul>
+                <li><a href="#"><span th:text="#{label.menu.specializedTestingServices}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.qaTestingEngineeringServices}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.mobilityTesting}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.cloudTesting}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.qaConsultingServices}"></span></a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span th:text="#{label.menu.projectManagement}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.product}"></span></a>
+              <ul>
+                <li><a href="#"><span th:text="#{label.menu.eMS}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.eRM}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.pOS}"></span></a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span th:text="#{label.menu.quizform}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.connectedServices}"></span></a>
+              <ul>
+                <li><a href="#"><span th:text="#{label.menu.microsoftSurfacePro}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.allInOne}"></span></a></li>
+                <li><a href="#"><span th:text="#{label.menu.posx}"></span></a>
+									<ul>
+		                <li><a href="#"><span th:text="#{label.menu.barcodeScanners}"></span></a>
+				              <ul>
+				                <li><a href="#"><span th:text="#{label.menu.wirelessBarcodeScanners}"></span></a></li>
+				                <li><a href="#"><span th:text="#{label.menu.wiredBarcodeScanners}"></span></a></li>
+				                <li><a href="#"><span th:text="#{label.menu.loyaltyBarcodeScanners}"></span></a>
+						              <ul>
+						                <li><a href="#"><span th:text="#{label.menu.EVOOmni}"></span></a></li>
+						                <li><a href="#"><span th:text="#{label.menu.blinkLoyaltyScanner}"></span></a></li>
+						                <li><a href="#"><span th:text="#{label.menu.EVOLaser}"></span></a></li>
+						                <li><a href="#"><span th:text="#{label.menu.IONLinear}"></span></a></li>
+						                <li><a href="#"><span th:text="#{label.menu.IONShortRange}"></span></a></li>
+						              </ul>
+				                </li>
+				              </ul>
+		                </li>
+		                <li><a href="#"><span th:text="#{label.menu.cashDrawers}"></span></a>
+				              <ul>
+				                <li><a href="#"><span th:text="#{label.menu.EVOPro}"></span></a></li>
+				                <li><a href="#"><span th:text="#{label.menu.IONSide}"></span></a></li>
+				                <li><a href="#"><span th:text="#{label.menu.IONCashDrawer}"></span></a></li>
+				              </ul>
+		                </li>
+									</ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#"><span th:text="#{label.menu.industries}"></span></a>
+          <ul>
+            <li><a href="#"><span th:text="#{label.menu.retail}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.healthcare}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.manufacturing}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.insurance}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.finance}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.financeBanking}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.mortgage}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.travelAirlines}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.telecom}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.cinema}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.schoolCafeteria}"></span></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span th:text="#{label.menu.resources}"></span></a>
+          <ul>
+            <li><a href="#"><span th:text="#{label.menu.productManuals}"></span></a></li>
+            <li><a href="/book/list"><span th:text="#{nav.menu.books}">Books</span></a></li>
+            <li><a href="/measureUnit/"><span th:text="#{nav.menu.measureUnits}">Measure Units</span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.configurationTool}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.photoGallery}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.specificationSheets}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.caseStudies}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.touchDynamicMAPP}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.documentationAndDownloads}"></span></a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span th:text="#{label.menu.support}"></span></a>
+          <ul>
+            <li><a href="#"><span th:text="#{label.menu.supportOnline}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.supportCollaborate}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.supportPremium}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.supportPlans}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.techSupport}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.requestRMA}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.requestRMAStatus}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.imageSubmission}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.remoteSupport}"></span></a></li>
+            <li><a href="#"><span th:text="#{label.menu.fAQs}"></span></a>
+		          <ul>
+		            <li><a href="#"><span th:text="#{label.menu.replacement}"></span></a></li>
+		            <li><a href="#"><span th:text="#{label.menu.levelWarranty}"></span></a></li>
+            		<li><a href="#"><span th:text="#{label.menu.renewal}"></span></a></li>
+		          </ul>
+		        </li>
+          </ul>
+        </li>
+        <li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.mekongBusinessGate}"></span></a>
+          <ul>
+            <li sec:authorize="isAuthenticated()"><a href="/store/"><span th:text="#{label.menu.pos}"></span></a></li>
+            <li><a href="/store/"><span th:text="#{label.menu.brs}"></span></a>
+            	<ul>
+								<li sec:authorize="isAuthenticated()"><a href="/brx"><img src="/image/brx/brx-dashboard.png" class="menuIcon" /><span th:text="#{label.menu.brsDashboard}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/brx-schedule.png" class="menuIcon" /><span th:text="#{label.menu.brsSchedule}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/bookings.png" class="menuIcon" /><span th:text="#{label.menu.brsBookings}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/modern-bus.png" class="menuIcon" /><span th:text="#{label.menu.brsBuses}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/bus-route.png" class="menuIcon" /><span th:text="#{label.menu.brsRoutes}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/bus-type.png" class="menuIcon" /><span th:text="#{label.menu.brsBusTypes}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/modern-bus.png" class="menuIcon" /><span th:text="#{label.menu.brsReports}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/modern-city-bus.jpg" class="menuIcon" /><span th:text="#{label.menu.brsSettings}"></span></a></li>
+								<li sec:authorize="isAuthenticated()"><a href="#"><img src="/image/brx/modern-bus.png" class="menuIcon" /><span th:text="#{label.menu.brsContacts}"></span></a></li>
+            	</ul>
+            </li>
+            <li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.ecoplatform}"></span></a>
+            	<ul>
+		            <li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.training}"></span></a>
+		            	<ul>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.installation}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.security}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.productivity}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.customization}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.dataOperational}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.synchronization}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.reporting}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.workflow}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.offlineClients}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.businessProcesses}"></span></a></li>
+		            	</ul>
+		            </li>
+		            <li sec:authorize="isAuthenticated()"><a href="/catalog/"><span th:text="#{label.menu.administration}"></span></a>
+		            	<ul>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.system}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.userManagement}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.customization}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.emailManagement}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.incidentManagement}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.orderManagement}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.cloudServices}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.businessProcessManagement}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.bPMCaseStudies}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.businessProcessEngine}"></span></a></li>
+		            	</ul>
+		            </li>
+		            <li sec:authorize="isAuthenticated()"><a href="/department/"><span th:text="#{label.menu.dataManagement}"></span></a>
+		            	<ul>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.import}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.export}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.update}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.merge}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.backup}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.recovery}"></span></a></li>
+		            	</ul>
+		            </li>
+		            <li sec:authorize="isAuthenticated()"><a href="/category/"><span th:text="#{label.menu.businessModules}"></span></a>
+		            	<ul>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.homePage}"></span></a>
+											<ul>
+												<li sec:authorize="isAuthenticated()"><a href="/adminDashlet/"><span th:text="#{label.menu.dashlets}"></span></a></li>
+												<li sec:authorize="isAuthenticated()"><a href="/adminDashboard/"><span th:text="#{label.menu.dashboard}"></span></a></li>
+												<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.globalSearch}"></span></a></li>
+											</ul>
+										</li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.themes}"></span></a>
+											<ul>
+												<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.atlantic}"></span></a></li>
+												<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.six}"></span></a></li>
+												<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.sugar}"></span></a></li>
+											</ul>
+										</li>
+										<li sec:authorize="isAuthenticated()"><a href="/product/"><span th:text="#{label.menu.product}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/catalog/"><span th:text="#{label.menu.catalogues}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/catalogSubtype/"><span th:text="#{label.menu.cataloguesSubtypes}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.activities}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.accounts}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/contact/"><span th:text="#{label.menu.contacts}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/enterprise/"><span th:text="#{label.menu.enterprises}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/opportunity"><span th:text="#{label.menu.opportunities}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.leads}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.cases}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.documents}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.employees}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/project/"><span th:text="#{label.menu.projects}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.campaigns}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.knowledgeBase}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.contracts}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.quotes}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.orders}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.invoices}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.payments}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.creditCards}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.reports}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.charts}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.surveys}"></span></a></li>
+		            	</ul>
+		            </li>
+		            <li sec:authorize="isAuthenticated()"><a href="/product/"><span th:text="#{label.menu.userProfile}"></span></a>
+		            	<ul>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.mySignatures}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.googleAppsSync}"></span></a></li>
+										<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.iCloudSync}"></span></a></li>
+		            	</ul>
+		            </li>
+            	</ul>
+            </li>
+            <li sec:authorize="isAuthenticated()"><a href="#"><span th:text="#{label.menu.agroforestryPlatform}"></span></a>
+	            	<ul>
+									<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaculture}"></span></a>
+										<ul>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaFarms}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaPonds}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaMaterial}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaMedicine}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaLivestockFeeds}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaProductionPlan}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaFarmingPlan}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaDiseaseNotification}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaSeeds}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaPondSummary}"></span></a></li>
+											<li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.aquaCostAdmin}"></span></a></li>
+										</ul>
+									</li>
+	            	</ul>
+            </li>            
+          </ul>
+          
+          <!-- 
+          <li sec:authorize="isAuthenticated()"><a href="/"><span th:text="#{label.menu.}"></span></a></li>
+          -->
+          <!-- <ul>
+            <li sec:authorize="isAuthenticated()"><a href="/store/"><span th:text="#{nav.menu.stores}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/client/"><span th:text="#{nav.menu.contacts}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/client/"><span th:text="#{nav.menu.clients}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/catalog/"><span th:text="#{nav.menu.catalogs}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/department/"><span th:text="#{nav.menu.departments}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/category/"><span th:text="#{nav.menu.categories}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/product/"><span th:text="#{nav.menu.products}"></span></a></li>
+            <li sec:authorize="isAuthenticated()"><a href="/project/"><span th:text="#{nav.menu.project}"></span></a></li>
+          </ul> -->
+        </li>
+        <!-- 
+        <li><a href="#">Sub test</a>
+          <ul>
+            <li><a href="#">Dummy item</a></li>
+            <li><a href="#">Dummy item</a></li>
+            <li><a href="#" class="disabled">Disabled menu item</a></li>
+            <li><a href="#">Dummy item</a></li>
+            <li><a href="#">more...</a>
+              <ul>
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">more...</a>
+                  <ul>
+                    <li><a href="#">Dummy item</a></li>
+                    <li><a href="#" class="current">A 'current' class item</a></li>
+                    <li><a href="#">Dummy item</a></li>
+                    <li><a href="#">more...</a>
+                      <ul>
+                        <li><a href="#">subMenusMinWidth</a></li>
+                        <li><a href="#">10em</a></li>
+                        <li><a href="#">forced.</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Dummy item</a></li>
+                    <li><a href="#">Dummy item</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">A pretty long text to test the default subMenusMaxWidth:20em setting for the sub menus</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+                <li><a href="#">Dummy item</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        -->
+    	</ul>
+    	<!--
+			<ul class="nav navbar-nav">
+                <li class="dropdown" id="accountmenu">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account Settings<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Login</a></li>
+                      	<li class="dropdown-submenu">
+                          <a tabindex="-1" href="#">More options</a>
+                          <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">Second level</a></li>
+                            <li class="dropdown-submenu">
+                              <a href="#">More..</a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="#">3rd level</a></li>
+                                  <li><a href="#">3rd level</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Second level</a></li>
+                            <li><a href="#">Second level</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Register</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+			</ul>
+			-->
+        <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
+            <li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="label label-success">4</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="header"><span th:text="#{label.haveMessages(5)}">You have 4 messages</span></li>
+                    <li>
+                        <!-- inner menu: contains the actual data -->
+                        <ul class="menu">
+                            <li><!-- start message -->
+                                <a href="#">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{label.supportTeam}">
+                                        Support Team 
+                                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                    </h4>
+                                    <p th:text="#{label.sampleMessage}">Why not buy a new awesome theme?</p>
+                                </a>
+                            </li>
+                            <!-- end message -->
+                            <li>
+                                <a href="#">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{label.adminDesignTeam}">
+                                        AdminLTE Design Team
+                                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                    </h4>
+                                    <p th:text="#{label.sampleMessage}">Why not buy a new awesome theme?</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{label.developers}">
+                                        Developers
+                                        <small><i class="fa fa-clock-o"></i> Today</small>
+                                    </h4>
+                                    <p th:text="#{label.sampleMessage}">Why not buy a new awesome theme?</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/user3-128x128.jpg" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{label.salesDepartment}">
+                                        Sales Department
+                                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                    </h4>
+                                    <p th:text="#{label.sampleMessage}">Why not buy a new awesome theme?</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/user4-128x128.jpg" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{label.reviewers}">
+                                        Reviewers
+                                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                    </h4>
+                                    <p th:text="#{label.sampleMessage}">Why not buy a new awesome theme?</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer"><a href="#"><span th:text="#{label.seeAllMessages}">See All Messages</span></a></li>
+                </ul>
+            </li>
+            <!-- Notifications: style can be found in dropdown.less -->
+            <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-bell-o"></i>
+                    <span class="label label-warning">10</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="header"><span th:text="#{label.notifications(10)}">You have 10 notifications</span></li>
+                    <li>
+                        <!-- inner menu: contains the actual data -->
+                        <ul class="menu">
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-users text-aqua"></i><span th:text="#{label.todayNewMembersJoined(7)}">5 new members joined today</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-warning text-yellow"></i><span th:text="#{label.veryLongDescription}">Very long description here that may not fit into the
+                                    page and may cause design problems</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-users text-red"></i><span th:text="#{label.newMemberJoined(5)}">5 new members joined</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-shopping-cart text-green"></i><span th:text="#{label.salesMade(27)}">25 sales made</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user text-red"></i><span th:text="#{label.changedYourUsername}">You changed your username</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer"><a href="#" th:text="#{label.viewAllNotifications}">View all</a></li>
+                </ul>
+            </li>
+            <!-- Tasks: style can be found in dropdown.less -->
+            <li class="dropdown tasks-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-flag-o"></i>
+                    <span class="label label-danger">9</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="header"><span th:text="#{label.tasks(19)}">You have 9 tasks</span></li>
+                    <li>
+                        <!-- inner menu: contains the actual data -->
+                        <ul class="menu">
+                            <li><!-- Task item -->
+                                <a href="#">
+                                    <h3 th:text="#{label.designButtons}">
+                                        Design some buttons
+                                        <small class="pull-right">20%</small>
+                                    </h3>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- end task item -->
+                            <li><!-- Task item -->
+                                <a href="#">
+                                    <h3 th:text="#{label.haveMessages}">
+                                        Create a nice theme
+                                        <small class="pull-right">40%</small>
+                                    </h3>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="sr-only">40% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- end task item -->
+                            <li><!-- Task item -->
+                                <a href="#">
+                                    <h3 th:text="#{label.tasksToDo}">
+                                        Some task I need to do
+                                        <small class="pull-right">60%</small>
+                                    </h3>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="sr-only">60% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- end task item -->
+                            <li><!-- Task item -->
+                                <a href="#">
+                                    <h3 th:text="#{label.makeBeautifulTransitions}">
+                                        Make beautiful transitions
+                                        <small class="pull-right">80%</small>
+                                    </h3>
+                                    <div class="progress xs">
+                                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                            <span class="sr-only">80% Complete</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <!-- end task item -->
+                        </ul>
+                    </li>
+                    <li class="footer">
+                        <a href="#"><span th:text="#{label.viewAlltasks}">View all tasks</span></a>
+                    </li>
+                </ul>
+            </li>
+        	<!-- Localization part -->
+					<li class="dropdown messages-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa fa-language"></i>
+                    <span class="label label-success">3</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="header"><span th:text="#{label.haveLaguages(3)}">You can touch in 3 languages</span></li>
+                    <li>
+                        <!-- inner menu: contains the actual data -->
+                        <ul class="menu">
+                            <li><!-- start message -->
+                                <a href="?lang=vi">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/Vietnam.png" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{lang.vi}" id="app-locale-vietnamese">Vietnamese</h4>
+                                    <p th:text="#{label.language.vietnamese}" id="app-locale-vietnamese-info">Display all literals, text, notifications in Vietnamese language</p>
+                                </a>
+                            </li>
+                            <!-- end message -->
+                            <li>
+                                <a href="?lang=en">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/United-States.png" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{lang.en}" id="app-locale-english">English</h4>
+                                    <p th:text="#{label.language.english}" id="app-locale-english-info">Display all literals, text, notifications in English language</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?lang=fr">
+                                    <div class="pull-left">
+                                        <img src="/dist/img/France.png" class="img-circle" alt="User Image" />
+                                    </div>
+                                    <h4 th:text="#{lang.fr}" id="app-locale-french">French</h4>
+                                    <p th:text="#{label.language.french}" id="app-locale-french-info">Display all literals, text, notifications in French language</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <!-- End of localization -->            
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="width: 30px">
+                    <img src="/dist/img/businessWoman.png" class="user-image" alt="User Image">
+                    <span class="hidden-xs">&nbsp;</span>
+                    <!-- <span class="hidden-xs" th:text="#{label.clientUserCorner}">Alexander Pierce</span> -->
+                </a>
+                <ul class="dropdown-menu">
+                    <!-- User image -->
+                    <li class="user-header">
+                        <img src="/dist/img/businessWoman.png" class="img-circle" alt="User Image">
+												<p th:if="${session.authenticatedUser != null}">
+													<span th:if="${session.authenticatedUser != null}" th:text="${session.authenticatedUser.displayName}">Authenticated user</span><br>
+													<span th:if="${session.authenticatedUser != null}" th:text="#{label.user.memberSince(${session.authenticatedUser.displayIssueDate})}">Member since</span>
+												</p>
+												<p th:if="${session.authenticatedUser == null}">
+													<span th:text="#{label.anonymousClientUser}">Anonymous client user</span>
+												</p>
+                    </li>
+                    <!-- Menu Body -->
+                    <li class="user-body">
+                        <div class="row">
+                            <div class="col-xs-4 text-center">
+                                <a href="#" th:text="#{label.user.followers}">Followers</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#" th:text="#{label.user.sales}">Sales</a>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <a href="#" th:text="#{label.user.friends}">Friends</a>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </li>
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <div class="pull-left" sec:authorize="isAuthenticated()">
+                            <a href="/auth/clientLoginProfile" class="btn btn-default btn-flat" th:text="#{label.user.profile}">Profile</a>
+                        </div>
+                        <div class="pull-right">
+                            <a href="/auth/clientChangeSecurity" class="btn btn-default btn-flat" th:text="#{label.changeSecurity}" sec:authorize="isAuthenticated()">Sign out</a>
+                            <a href="/auth/clientLogout" class="btn btn-default btn-flat" th:text="#{label.signOut}" sec:authorize="isAuthenticated()">Sign out</a>
+                            <a href="/login" class="btn btn-default btn-flat" th:text="#{label.signIn}" sec:authorize="!isAuthenticated()" th:if="${session.authenticated=='show login'}">Sign In</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- Control Sidebar Toggle Button -->
+            <li>
+                <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
