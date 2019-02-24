@@ -90,8 +90,8 @@ import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
 		FreeMarkerEmailConfiguration.class})
 @EnableAsync
 public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigurerAdapter*/ {
-	@Inject
-	private CategoryManager categoryService;
+	/*@Inject
+	private CategoryManager categoryService;*/
 	
 	/**
 	 * Entry point of the application
@@ -203,12 +203,12 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 		registry.addInterceptor(localeChangeInterceptor());
 	}
 
-	@Override
+	/*@Override
 	public void addFormatters(FormatterRegistry registry) {
 		registry.addConverter(new CategoryConverter(categoryService));
 
 		registry.addFormatter(new CategoryFormatter(categoryService));
-	}
+	}*/
 
 	private Locale getDefaultLocale(){
 		return new Locale("vi", "VN");
