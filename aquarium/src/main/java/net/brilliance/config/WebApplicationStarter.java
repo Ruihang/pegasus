@@ -102,7 +102,8 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(WebApplicationStarter.class);
 		//app.setBannerMode(Mode.OFF);
-		ConfigurableApplicationContext  configAppContext = app.run(args);
+		app.run(args);
+		/*ConfigurableApplicationContext  configAppContext = app.run(args);
 
 		GlobalDataRepositoryManager globalDataRepositoryManager = null;
 		try {
@@ -112,7 +113,7 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 			log.info("The global data is initialization is done. ");
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
-		}
+		}*/
 	}
 
 	/*@Bean
