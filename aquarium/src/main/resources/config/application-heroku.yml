@@ -57,7 +57,9 @@ quartz:
 # spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 
 # Every 5 seconds
-simplejob.frequency=15000      
+simplejob:
+  frequency: 15000      
 
-dummy.type=Unknown
+dummy
+  type: Unknown
 
