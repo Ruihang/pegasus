@@ -60,6 +60,6 @@ quartz:
 simplejob:
   frequency: 15000      
 
-dummy
+dummy:
   type: Unknown
 
