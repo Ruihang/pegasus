@@ -19,6 +19,7 @@ import java.util.Locale;
 
 import javax.inject.Inject;
 
+import org.springframework.boot.Banner.Mode;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -42,11 +43,9 @@ import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 import lombok.extern.slf4j.Slf4j;
-import net.brilliance.controller.coordinator.Controllers;
 import net.brilliance.converter.CategoryConverter;
 import net.brilliance.converter.CategoryFormatter;
 import net.brilliance.dispatch.GlobalDataRepositoryManager;
-import net.brilliance.framework.manager.Services;
 import net.brilliance.manager.catalog.CategoryManager;
 import net.brilliance.manager.mail.ThymeleafMailConfig;
 import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
@@ -78,7 +77,7 @@ import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
  *
  */
 @Slf4j
-@SpringBootApplication(scanBasePackageClasses = { Controllers.class, Services.class })
+@SpringBootApplication
 @EnableConfigurationProperties({  MailProperties.class})
 @EnableAspectJAutoProxy
 @Import(value = { 
@@ -90,8 +89,8 @@ import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
 		FreeMarkerEmailConfiguration.class})
 @EnableAsync
 public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigurerAdapter*/ {
-	/*@Inject
-	private CategoryManager categoryService;*/
+	@Inject
+	private CategoryManager categoryService;
 	
 	/**
 	 * Entry point of the application
@@ -101,9 +100,8 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 	 */
 	public static void main(String[] args) {
 		SpringApplication app = new SpringApplication(WebApplicationStarter.class);
-		//app.setBannerMode(Mode.OFF);
-		app.run(args);
-		/*ConfigurableApplicationContext  configAppContext = app.run(args);
+		app.setBannerMode(Mode.OFF);
+		ConfigurableApplicationContext  configAppContext = app.run(args);
 
 		GlobalDataRepositoryManager globalDataRepositoryManager = null;
 		try {
@@ -113,7 +111,7 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 			log.info("The global data is initialization is done. ");
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
-		}*/
+		}
 	}
 
 	/*@Bean
@@ -204,12 +202,12 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 		registry.addInterceptor(localeChangeInterceptor());
 	}
 
-	/*@Override
+	@Override
 	public void addFormatters(FormatterRegistry registry) {
 		registry.addConverter(new CategoryConverter(categoryService));
 
 		registry.addFormatter(new CategoryFormatter(categoryService));
-	}*/
+	}
 
 	private Locale getDefaultLocale(){
 		return new Locale("vi", "VN");
