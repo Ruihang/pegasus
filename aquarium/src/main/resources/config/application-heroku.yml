@@ -26,7 +26,8 @@ spring:
       connection-timeout: 30000
   jpa:
     database: postgresql
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
     generate-ddl: true
     properties: 
       hibernate.temp.use_jdbc_metadata_defaults: false
@@ -47,13 +48,13 @@ spring:
 quartz:
   enabled: false
 
-#spring.main.allow-bean-definition-overriding=true
+# spring.main.allow-bean-definition-overriding=true
 
 # Disable feature detection by this undocumented parameter. Check the org.hibernate.engine.jdbc.internal.JdbcServiceImpl.configure method for more details.
-spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
+# spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
 
 # Because detection is disabled you have to set correct dialect by hand.
-spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
+# spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 
 # Every 5 seconds
 simplejob.frequency=15000      
