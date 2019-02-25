@@ -16,7 +16,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>apa.ecosystem</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>aureola-com</artifactId>
 			<version>${project.version}</version>
 		</dependency>

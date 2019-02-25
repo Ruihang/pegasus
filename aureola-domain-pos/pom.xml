@@ -15,22 +15,8 @@
     </description>
 
 	<dependencies>
-		<!-- 
-		<dependency>
-			<groupId>apa.ecosystem</groupId>
-			<artifactId>aureola-com</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>apa.ecosystem</groupId>
-			<artifactId>aureola-core</artifactId>
-			<version>${project.version}</version>
-		</dependency> 
-		-->
-
     <dependency>
-      <groupId>apa.ecosystem</groupId>
+      <groupId>${project.groupId}</groupId>
       <artifactId>aureola-domain-base</artifactId>
       <version>${project.version}</version>
     </dependency>

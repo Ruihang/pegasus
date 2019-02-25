@@ -16,19 +16,19 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>apa.ecosystem</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>aureola-com</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>apa.ecosystem</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>aureola-bpm</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>apa.ecosystem</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>aureola-service</artifactId>
 			<version>${project.version}</version>
 		</dependency>
