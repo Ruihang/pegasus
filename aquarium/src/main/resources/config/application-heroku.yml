@@ -14,6 +14,7 @@
 # limitations under the License.                                              #
 ###############################################################################
 
+
 spring:
   datasource:
     hikari:
@@ -22,6 +23,7 @@ spring:
       maximum-pool-size: 10
       initialization-fail-fast: true
       minimum-idle: 2
+      connection-timeout: 30000
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
@@ -42,23 +44,16 @@ spring:
 quartz:
   enabled: false
 
-
-spring.user.email: ducbuiquy@gmail.com
-
-spring.main.allow-bean-definition-overriding: true
+spring.main.allow-bean-definition-overriding=true
 
 # Disable feature detection by this undocumented parameter. Check the org.hibernate.engine.jdbc.internal.JdbcServiceImpl.configure method for more details.
-spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: false
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults=false
 
 # Because detection is disabled you have to set correct dialect by hand.
-spring.jpa.database-platform: org.hibernate.dialect.PostgreSQL9Dialect
-
-
-
-quartz.enabled: false
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 
 # Every 5 seconds
-simplejob.frequency: 15000      
+simplejob.frequency=15000      
 
-dummy.type: Unknown
+dummy.type=Unknown
 
