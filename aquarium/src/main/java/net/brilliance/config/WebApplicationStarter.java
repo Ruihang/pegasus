@@ -17,8 +17,6 @@ package net.brilliance.config;
 
 import java.util.Locale;
 
-import javax.inject.Inject;
-
 import org.springframework.boot.Banner.Mode;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -33,7 +31,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
-import org.springframework.format.FormatterRegistry;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -43,10 +40,7 @@ import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 
 import lombok.extern.slf4j.Slf4j;
-import net.brilliance.converter.CategoryConverter;
-import net.brilliance.converter.CategoryFormatter;
 import net.brilliance.dispatch.GlobalDataRepositoryManager;
-import net.brilliance.manager.catalog.CategoryManager;
 import net.brilliance.manager.mail.ThymeleafMailConfig;
 import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
 
@@ -89,8 +83,8 @@ import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
 		FreeMarkerEmailConfiguration.class})
 @EnableAsync
 public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigurerAdapter*/ {
-	@Inject
-	private CategoryManager categoryService;
+	/*@Inject
+	private CategoryManager categoryService;*/
 	
 	/**
 	 * Entry point of the application
@@ -202,12 +196,12 @@ public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigure
 		registry.addInterceptor(localeChangeInterceptor());
 	}
 
-	@Override
+	/*@Override
 	public void addFormatters(FormatterRegistry registry) {
 		registry.addConverter(new CategoryConverter(categoryService));
 
 		registry.addFormatter(new CategoryFormatter(categoryService));
-	}
+	}*/
 
 	private Locale getDefaultLocale(){
 		return new Locale("vi", "VN");
