@@ -342,4 +342,8 @@ public class CommonBeanUtils {
 
       return resultPropertyDescriptor;
   }
+
+  public static Object getBeanProperty(Object bean, String property) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+  	return getObjectAttribute(bean, property);
+  }
 }
