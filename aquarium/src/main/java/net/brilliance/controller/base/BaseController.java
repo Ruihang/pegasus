@@ -36,6 +36,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import net.brilliance.common.CommonBeanUtils;
 import net.brilliance.common.CommonConstants;
 import net.brilliance.common.CommonUtility;
 import net.brilliance.common.ListUtility;
@@ -56,7 +57,6 @@ import net.brilliance.model.Bucket;
 import net.brilliance.model.SelectItem;
 import net.brilliance.service.api.inventory.CatalogueSubtypeService;
 import net.brilliance.service.helper.GlobalDataServiceHelper;
-import net.sf.ehcache.hibernate.management.impl.BeanUtils;
 
 /**
  * @author ducbq
@@ -195,9 +195,9 @@ public abstract class BaseController {
 		List<SelectItem> selectItems = ListUtility.createArrayList();
 		if (CommonUtility.isNotEmpty(objects)){
 			for (Object object :objects){
-				objectId = (Long)BeanUtils.getBeanProperty(object, "id");
-				objectCode = (String)BeanUtils.getBeanProperty(object, "code");
-				objectName = (String)BeanUtils.getBeanProperty(object, "name");
+				objectId = (Long)CommonBeanUtils.getBeanProperty(object, "id");
+				objectCode = (String)CommonBeanUtils.getBeanProperty(object, "code");
+				objectName = (String)CommonBeanUtils.getBeanProperty(object, "name");
 				selectItems.add(SelectItem.builder().id(objectId).code(objectCode).name(objectName).build());
 			}
 		}
@@ -209,9 +209,9 @@ public abstract class BaseController {
 		String objectCode = null, objectName = null;
 		List<SelectItem> selectItems = new ArrayList<>();
 		for (Object object :objects){
-			objectId = (Long)BeanUtils.getBeanProperty(object, idProperty);
-			objectCode = (String)BeanUtils.getBeanProperty(object, displayCodeProperty);
-			objectName = (String)BeanUtils.getBeanProperty(object, displayNameProperty);
+			objectId = (Long)CommonBeanUtils.getBeanProperty(object, idProperty);
+			objectCode = (String)CommonBeanUtils.getBeanProperty(object, displayCodeProperty);
+			objectName = (String)CommonBeanUtils.getBeanProperty(object, displayNameProperty);
 			selectItems.add(SelectItem.builder().id(objectId).code(objectCode).name(objectName).build());
 		}
 		return selectItems;
@@ -222,9 +222,9 @@ public abstract class BaseController {
 		String objectCode = null, objectName = null;
 		List<SelectItem> selectItems = new ArrayList<>();
 		for (Object object :objects){
-			objectId = (Long)BeanUtils.getBeanProperty(object, "id");
-			objectCode = (String)BeanUtils.getBeanProperty(object, "code");
-			objectName = (String)BeanUtils.getBeanProperty(object, "name");
+			objectId = (Long)CommonBeanUtils.getBeanProperty(object, "id");
+			objectCode = (String)CommonBeanUtils.getBeanProperty(object, "code");
+			objectName = (String)CommonBeanUtils.getBeanProperty(object, "name");
 			selectItems.add(SelectItem.builder().id(objectId).code(objectCode).name(objectName).build());
 		}
 		return selectItems;
@@ -235,9 +235,9 @@ public abstract class BaseController {
 		List<SelectItem> selectItems = ListUtility.createArrayList();
 		Map<String, Object> displayValueMap = ListUtility.createMap();
 		for (Object object :objects){
-			objectId = (Long)BeanUtils.getBeanProperty(object, keyProperty);
+			objectId = (Long)CommonBeanUtils.getBeanProperty(object, keyProperty);
 			for (String displayProperty :displayProperties){
-				displayValueMap.put(displayProperty, BeanUtils.getBeanProperty(object, displayProperty));
+				displayValueMap.put(displayProperty, CommonBeanUtils.getBeanProperty(object, displayProperty));
 			}
 
 			selectItems.add(SelectItem.builder().build().instance(objectId, displayValueMap));
