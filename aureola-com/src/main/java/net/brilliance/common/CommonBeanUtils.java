@@ -343,7 +343,13 @@ public class CommonBeanUtils {
       return resultPropertyDescriptor;
   }
 
-  public static Object getBeanProperty(Object bean, String property) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-  	return getObjectAttribute(bean, property);
+  public static Object getBeanProperty(Object bean, String property) {
+  	Object fetchedObject = null;
+  	try {
+  		fetchedObject = getObjectAttribute(bean, property);
+		} catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+			log.error(e.getMessage());
+		}
+  	return fetchedObject;
   }
 }
