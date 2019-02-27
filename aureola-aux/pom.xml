@@ -43,11 +43,11 @@
 		    <artifactId>validation-api</artifactId>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 		    <groupId>org.hibernate</groupId>
 		    <artifactId>hibernate-validator</artifactId>
 		    <version>${hibernate-validator.version}</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.jaxrs</groupId>
