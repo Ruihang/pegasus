@@ -2,7 +2,7 @@ package com.salesmanager.core.modules.integration;
 
 import java.util.List;
 
-import com.salesmanager.core.business.exception.ServiceException;
+import com.salesmanager.core.exception.ServiceException;
 
 public class IntegrationException extends ServiceException {
 	
