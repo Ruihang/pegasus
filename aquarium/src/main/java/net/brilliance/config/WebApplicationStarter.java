@@ -17,8 +17,7 @@ package net.brilliance.config;
 
 import java.util.Locale;
 
-import javax.inject.Inject;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -88,7 +87,7 @@ import net.brilliance.manager.mail.freemarker.FreeMarkerEmailConfiguration;
 		FreeMarkerEmailConfiguration.class})
 @EnableAsync
 public class WebApplicationStarter implements WebMvcConfigurer /*WebMvcConfigurerAdapter*/ {
-	@Inject
+	@Autowired
 	private CategoryManager categoryService;
 	
 	/**
