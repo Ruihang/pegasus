@@ -12,6 +12,7 @@ public interface ConfigurationConstants {
 	final static String PACKAGE_DOMAIN = PACKAGE_ROOT + ".*";
 	final static String PACKAGE_ENTITY = PACKAGE_ROOT + ".*";
 	final static String PACKAGE_REPOSITORY = PACKAGE_ROOT + ".*";
+	final static String PACKAGE_COMPONENTS = PACKAGE_ROOT + ".*";
 
 
 

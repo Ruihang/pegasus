@@ -25,7 +25,7 @@ import net.brilliance.config.handler.listener.WebHttpSessionListener;
 @EnableCaching
 @Configuration
 @ComponentScan({
-	ConfigurationConstants.PACKAGE_ROOT
+	ConfigurationConstants.PACKAGE_COMPONENTS
 })
 @EntityScan(
 		/*basePackageClasses = {AbstractAuditEntity.class}, */
